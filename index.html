@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Turn books you own into AI skills, summaries, and study notes. 100% on your device. Nothing is ever uploaded.">
+<meta name="description" content="Turn books you own into AI skills on your device. Preview free. Nothing uploaded. DRM refused.">
 <title>Bindlore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +75,7 @@ header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}}
 .hero h1{font-size:clamp(40px,6.4vw,68px);letter-spacing:-.01em}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.lede{color:var(--ink-soft);font-size:clamp(17px,2.1vw,20px);margin:22px 0 12px;max-width:34ch}
+.lede{color:var(--ink-soft);font-size:clamp(17px,2.1vw,20px);margin:22px 0 12px;max-width:42ch}
 .trust{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 26px;font-family:"IBM Plex Mono",monospace;
   font-size:12.5px;color:var(--ink-soft)}
 .trust span{border:1px solid var(--hair);border-radius:20px;padding:5px 12px}
@@ -115,7 +115,7 @@ section{padding:74px 0;position:relative}
 .thesis::after{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-140px;
   background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
 .thesis .eyebrow{color:var(--gold-soft)}
-.thesis h2{font-size:clamp(30px,4.4vw,50px);color:#fff;margin-top:14px;max-width:16ch}
+.thesis h2{font-size:clamp(30px,4.4vw,50px);color:#fff;margin-top:14px;max-width:18ch}
 .thesis p{color:#b9c4ea;max-width:52ch;margin-top:18px;font-size:18px}
 .thesis .mono{font-family:"IBM Plex Mono",monospace;margin-top:26px;font-size:13.5px;color:var(--gold-soft);
   display:flex;gap:20px;flex-wrap:wrap}
@@ -192,6 +192,13 @@ details p{color:var(--ink-soft);margin:14px 0 0;font-size:15.5px}
 footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;color:var(--ink-soft);font-size:14px}
 .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 .foot-note{font-family:"IBM Plex Mono",monospace;font-size:12px}
+.ps-strip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);max-width:72ch;margin:0 auto 28px;line-height:1.55;text-align:center}
+
+/* demo video */
+.demo-wrap{margin-top:8px}
+.demo-frame{background:var(--panel);border:1px solid var(--hair);border-radius:20px;padding:14px;box-shadow:var(--shadow);overflow:hidden}
+.demo-frame video{display:block;width:100%;height:auto;border-radius:12px;background:#0a1330;aspect-ratio:16/9}
+.demo-caption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);margin-top:14px;text-align:center}
 
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
 .reveal.in{opacity:1;transform:none}
@@ -200,12 +207,6 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   .orb{animation:none}#motes{display:none}
   html{scroll-behavior:auto}
 }
-
-/* demo video */
-.demo-wrap{margin-top:8px}
-.demo-frame{background:var(--panel);border:1px solid var(--hair);border-radius:20px;padding:14px;box-shadow:var(--shadow);overflow:hidden}
-.demo-frame video{display:block;width:100%;height:auto;border-radius:12px;background:#0a1330;aspect-ratio:16/9}
-.demo-caption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);margin-top:14px;text-align:center}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 </style>
 </head>
@@ -216,11 +217,11 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <div class="nav-in">
     <a class="logo" href="#top"><img src="/icon.png" alt="Bindlore logo"> Bindlore</a>
     <nav class="nav-links">
-      <a href="#how">How it works</a>
+      <a href="#how">How</a>
       <a href="#demo">Demo</a>
-      <a href="#features">Features</a>
-      <a href="#why">Why private</a>
+      <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
+      <a href="/privacy/">Privacy</a>
     </nav>
     <a class="btn btn-gold nav-cta" href="#waitlist" aria-disabled="true">Coming soon to Chrome</a>
   </div>
@@ -233,14 +234,15 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     <div class="wrap hero-grid">
       <div>
         <p class="eyebrow">Chrome extension · 100% on-device</p>
-        <h1>Turn a book into an <em>AI skill.</em></h1>
-        <p class="lede">Bindlore converts books you own — PDF, EPUB, Word, even photos of paper pages — into ready-to-use Claude &amp; ChatGPT skills.</p>
+        <h1>Your books. Your AI. Your machine.</h1>
+        <p class="lede">Bindlore is converting books you own — PDF, EPUB, Word, PowerPoint, text, even photos of paper pages — into ready-to-use AI skills for Claude and ChatGPT. Parsing, OCR, and skill-building run in your browser. There is no Bindlore cloud for your library to touch.</p>
         <div class="trust">
-          <span>No account</span><span>No upload</span><span>No server</span><span>OCR runs on your device</span>
+          <span>On-device</span><span>DRM-free files only</span><span>Preview free</span>
         </div>
         <div class="hero-cta">
           <a class="btn btn-gold" href="#waitlist">Get Bindlore — Coming soon</a>
-          <a class="btn btn-ghost" href="#how">See how it works</a>
+          <a class="btn btn-ghost" href="#demo">See the demo</a>
+          <a class="btn btn-ghost" href="/privacy/">Privacy</a>
         </div>
       </div>
       <div class="stage" aria-hidden="true">
@@ -256,13 +258,13 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     </div>
   </section>
 
-  <!-- WHY PRIVATE -->
+  <!-- PRIVACY THESIS -->
   <section id="why"><div class="wrap reveal">
     <div class="thesis">
       <p class="eyebrow">The whole point</p>
-      <h2>The book-to-AI tool that never sees your books.</h2>
-      <p>Other extractors screenshot your pages and ship them to their cloud to “process.” Bindlore doesn’t have a cloud. Parsing, OCR, and skill-building all happen inside your browser — your books, and everything you make from them, stay on your machine. Not even we can see them.</p>
-      <div class="mono"><span>› parsing: local</span><span>› OCR: local</span><span>› storage: your device</span><span>› our servers: none</span></div>
+      <h2>Other tools ship your pages to a cloud to “process.”</h2>
+      <p>Bindlore doesn’t have that cloud. Your books — and everything you make from them — are staying on your machine. Not even we can see them.</p>
+      <div class="mono"><span>› parsing: local</span><span>› OCR: local</span><span>› storage: your device</span><span>› our servers for your books: none</span></div>
     </div>
   </div></section>
 
@@ -271,12 +273,12 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     <div class="sec-head reveal">
       <p class="eyebrow">Three steps</p>
       <h2>Drop a book. Get something an AI can actually use.</h2>
-      <p>Not a raw text dump — a finished, structured skill with a <code>SKILL.md</code> and chapter references, ready to drop into Claude or Codex.</p>
+      <p>Not a raw text dump — a finished skill with <code>SKILL.md</code> and chapter references, ready for Claude or Codex.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="n">01 — ADD</div><h3>Drop a file or snap photos</h3><p>PDF, EPUB, Word, PowerPoint, TXT — or photos and scans of physical pages you own. Batch several at once.</p></div>
-      <div class="step reveal"><div class="n">02 — PREVIEW</div><h3>See it free</h3><p>Bindlore reads and splits the book into sections, pulls the title and author, and shows you a preview. No charge to look.</p></div>
-      <div class="step reveal"><div class="n">03 — EXPORT</div><h3>Get a real skill</h3><p>Download an AI Skill, Markdown, Word, or Text — plus optional AI summaries, key insights, and Anki flashcards.</p></div>
+      <div class="step reveal"><div class="n">01 — DROP</div><h3>Drop</h3><p>DRM-free file you own, or photos of pages you own. Batch several at once.</p></div>
+      <div class="step reveal"><div class="n">02 — PREVIEW</div><h3>Preview</h3><p>Free. Title, author, sections. No card to look.</p></div>
+      <div class="step reveal"><div class="n">03 — EXPORT</div><h3>Export</h3><p>AI Skill (<code>SKILL.md</code> + chapter refs), or Markdown, Word, Text.</p></div>
     </div>
   </div></section>
 
@@ -286,7 +288,6 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     <div class="sec-head reveal">
       <p class="eyebrow">See it</p>
       <h2>Book in. Skill out — on your device.</h2>
-      <p>A short walkthrough of Bindlore converting a book you own into a ready-to-use AI skill. Nothing leaves your machine.</p>
     </div>
     <div class="demo-wrap reveal">
       <div class="demo-frame">
@@ -300,7 +301,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
           Your browser does not support the video tag.
         </video>
       </div>
-      <p class="demo-caption">Product demo · plays muted with controls</p>
+      <p class="demo-caption">Product demo · muted · controls on · nothing leaves your machine.</p>
     </div>
   </div></section>
 
@@ -311,12 +312,12 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <h2>Built to make skills, not scrape text.</h2>
     </div>
     <div class="feat">
-      <div class="card reveal"><div class="ic">🔒</div><h3>On-device OCR</h3><p>Photograph a paper book you own; the text is recognized entirely on your machine. No image ever leaves your computer.</p></div>
-      <div class="card reveal"><div class="ic">🧩</div><h3>Finished skills</h3><p>A proper <code>SKILL.md</code> + chapter references — the thing an AI can actually search and cite, not a wall of text.</p></div>
-      <div class="card reveal"><div class="ic">📚</div><h3>Batch everything</h3><p>Drop a whole shelf of files at once and get one tidy bundle of skills back.</p></div>
-      <div class="card reveal"><div class="ic">✨</div><h3>AI summaries &amp; flashcards</h3><p>Optional chapter summaries, key-insight glossaries, and Anki decks — using your own OpenAI or Anthropic key.</p></div>
-      <div class="card reveal"><div class="ic">↔️</div><h3>Every format</h3><p>Export as Skill, Markdown, Word, or Text. One click to copy for AI, or jump straight into ChatGPT or Claude.</p></div>
-      <div class="card reveal"><div class="ic">🛡️</div><h3>Your content, your rights</h3><p>Works on books you own and public-domain titles. It refuses DRM by design — a converter, never a cracker.</p></div>
+      <div class="card reveal"><div class="ic">🔒</div><h3>On-device OCR</h3><p>Photograph a paper book you own. Text is recognized on your machine. Your pages never leave. Sleep better.</p></div>
+      <div class="card reveal"><div class="ic">🧩</div><h3>Finished skills, not raw dumps</h3><p>A proper <code>SKILL.md</code> your AI can search and cite. Less cleanup. More “it just works.”</p></div>
+      <div class="card reveal"><div class="ic">📚</div><h3>Batch a shelf</h3><p>Drop several files. Get one tidy skill bundle. Stop converting one book at a time.</p></div>
+      <div class="card reveal"><div class="ic">↔️</div><h3>Every format you already have</h3><p>PDF, EPUB, Word, PowerPoint, TXT, plus scans. Export as Skill, Markdown, Word, or Text.</p></div>
+      <div class="card reveal"><div class="ic">✨</div><h3>Optional AI extras</h3><p>Summaries, insights, Anki — using <strong>your</strong> OpenAI or Anthropic key. Browser → provider. Not through us.</p></div>
+      <div class="card reveal"><div class="ic">🛡️</div><h3>DRM refused on purpose</h3><p>Converter, not a cracker. Built for books you own and public-domain titles.</p></div>
     </div>
   </div></section>
 
@@ -330,19 +331,19 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <div class="col them">
         <h3>Typical “Kindle to text” tools</h3>
         <ul>
-          <li><span class="mark no">✕</span> Screenshot your pages and send them to their cloud</li>
-          <li><span class="mark no">✕</span> Hand you raw, messy text to clean up yourself</li>
-          <li><span class="mark no">✕</span> Lean on defeating copy-protection — legally shaky</li>
+          <li><span class="mark no">✕</span> Screenshots go to their cloud</li>
+          <li><span class="mark no">✕</span> Raw, messy text you clean yourself</li>
+          <li><span class="mark no">✕</span> Legally shaky DRM games</li>
           <li><span class="mark no">✕</span> Your library passes through someone else’s server</li>
         </ul>
       </div>
       <div class="col us">
         <h3>Bindlore</h3>
         <ul>
-          <li><span class="mark yes">✓</span> Everything runs on your device — no cloud, no server</li>
-          <li><span class="mark yes">✓</span> Hands you a finished, structured AI skill</li>
+          <li><span class="mark yes">✓</span> Everything on your device — no cloud for book content</li>
+          <li><span class="mark yes">✓</span> A finished, structured AI skill</li>
           <li><span class="mark yes">✓</span> Works on files you own; refuses DRM by design</li>
-          <li><span class="mark yes">✓</span> Your books never leave your machine — not even to us</li>
+          <li><span class="mark yes">✓</span> Your books never leave — not even to us</li>
         </ul>
       </div>
     </div>
@@ -353,25 +354,24 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     <div class="sec-head reveal">
       <p class="eyebrow">Price</p>
       <h2>Preview free. Pass when you need the full skill.</h2>
-      <p>Try Bindlore with a free preview. Unlock full exports with a Bindlore pass — billed through ExtensionPay + Stripe.</p>
     </div>
     <div class="price">
       <div class="tier reveal">
         <div class="name">Preview</div>
         <div class="amt">$0</div>
-        <ul><li>See title, author, and section split</li><li>Confirm the book looks right</li><li>No card required to look</li></ul>
+        <ul><li>See the split</li><li>Confirm it looks right</li><li>No card to look</li></ul>
         <a class="btn btn-ghost" href="#waitlist">Coming soon to Chrome</a>
       </div>
       <div class="tier best reveal">
         <div class="name">Monthly</div>
         <div class="amt">$14<span>/mo</span></div>
-        <ul><li>Full AI Skill + Markdown/Word/Text exports</li><li>On-device OCR for scans and photos</li><li>Batch conversion</li><li>Optional AI extras with your own key</li></ul>
+        <ul><li>Full AI Skill + Markdown/Word/Text</li><li>On-device OCR</li><li>Batch</li><li>Optional BYO-key extras</li></ul>
         <a class="btn btn-gold" href="#waitlist">Coming soon to Chrome</a>
       </div>
       <div class="tier reveal">
         <div class="name">Yearly</div>
         <div class="amt">$89<span>/yr</span></div>
-        <ul><li>Everything in Monthly</li><li>Best value vs month-to-month</li><li>Same on-device privacy</li></ul>
+        <ul><li>Everything in Monthly</li><li>Same on-device privacy</li><li>Better than month-to-month</li></ul>
         <a class="btn btn-ghost" href="#waitlist">Coming soon to Chrome</a>
       </div>
     </div>
@@ -381,33 +381,36 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <section id="faq"><div class="wrap">
     <div class="sec-head reveal"><p class="eyebrow">Questions</p><h2>The honest answers.</h2></div>
     <div class="faq">
-      <details class="reveal"><summary>Does it work with Kindle?</summary><p>No — and that’s deliberate. Kindle books are DRM-protected, and Bindlore refuses DRM files on purpose. It converts books you own as DRM-free files (many stores let you download EPUB/PDF), public-domain titles, and your own documents and scans.</p></details>
-      <details class="reveal"><summary>Where do my books go?</summary><p>Nowhere. Parsing, OCR, and skill-building all run inside your browser. There is no Bindlore server for your content to touch. Your files never leave your device.</p></details>
-      <details class="reveal"><summary>Do I need an account?</summary><p>No account, no sign-up. You install the extension and drop in a book. That’s it.</p></details>
-      <details class="reveal"><summary>What about the AI summaries — where does my key go?</summary><p>The AI extras are optional and use your own OpenAI or Anthropic key, stored only on your device. Requests go straight from your browser to the provider you chose — never through us.</p></details>
-      <details class="reveal"><summary>What can I actually make?</summary><p>A ready-to-use AI skill (<code>SKILL.md</code> + chapter references), plus Markdown, Word, or plain text. Optionally: chapter summaries, a key-insight glossary, and Anki flashcards.</p></details>
+      <details class="reveal"><summary>Does Bindlore work with Kindle / DRM books?</summary><p>No — on purpose. Bindlore refuses DRM-locked files. It converts DRM-free files you own (many stores let you download EPUB/PDF), public-domain titles, and your own documents and scans. Converter for content you have the right to use — not a DRM workaround.</p></details>
+      <details class="reveal"><summary>Where do my books go? Does Bindlore see them?</summary><p>Nowhere off your machine. Parsing, OCR, and skill-building run inside your browser. There is no Bindlore server for your book content. Your files never leave your device.</p></details>
+      <details class="reveal"><summary>Do I need an OpenAI or Anthropic key?</summary><p>Not for the core skill export. Optional extras (summaries, glossary, Anki) use your own key, stored only on your device. Requests go straight from your browser to the provider — never through Bindlore.</p></details>
+      <details class="reveal"><summary>Do I need an account?</summary><p>No account. No sign-up. Install the extension. Drop a book.</p></details>
     </div>
   </div></section>
 
   <section><div class="wrap reveal">
     <div class="final">
       <h2>Own your books. Own your AI.</h2>
-      <p>Turn the books on your shelf into skills your AI can use — without handing your library to anyone.</p>
+      <p>Turn the shelf you already paid for into skills your AI can use — without handing your library to anyone.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#waitlist">Get Bindlore — Coming soon</a>
+        <a class="btn btn-ghost" href="/privacy/" style="border-color:rgba(255,255,255,.25);color:#eaeefb">Privacy</a>
       </div>
     </div>
   </div></section>
 
   <section id="waitlist"><div class="wrap reveal" style="text-align:center;padding-top:0">
     <p class="eyebrow">Chrome Web Store</p>
-    <p style="color:var(--ink-soft);max-width:42ch;margin:12px auto 0;font-size:15.5px">Bindlore is not on the Chrome Web Store yet. CTAs above are placeholders until the extension is published — check back soon.</p>
+    <p style="color:var(--ink-soft);max-width:48ch;margin:12px auto 0;font-size:15.5px">Bindlore is not on the Chrome Web Store yet. Buttons above are Coming soon until the listing is live. No fake “Add to Chrome.”</p>
   </div></section>
 </main>
 
-<footer><div class="wrap foot-in">
-  <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
-  <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/privacy/">Privacy</a></div>
+<footer><div class="wrap">
+  <p class="ps-strip"><strong>P.S.</strong> Bindlore is turning books you own into on-device AI skills — Preview free, then $14/mo or $89/year. The Chrome listing isn’t live yet. When it drops, early installers get the cleanest path in. Watch bindlore.app.</p>
+  <div class="foot-in">
+    <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
+    <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/privacy/">Privacy</a></div>
+  </div>
 </div></footer>
 
 <script>
