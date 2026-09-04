@@ -1,1 +1,432 @@
-__LOAD_FROM_FILE__/tmp/arg_content.txt
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Turn books you own into AI skills, summaries, and study notes. 100% on your device. Nothing is ever uploaded.">
+<title>Bindlore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#f4f6fb; --panel:#ffffff; --panel-2:#eef2fb;
+  --ink:#101528; --ink-soft:#4a5270; --hair:#dbe1f0;
+  --indigo:#2b52d6; --indigo-deep:#12205a; --royal:#3b74f5;
+  --gold:#e2951a; --gold-soft:#f2b445; --glow:rgba(226,149,26,.28);
+  --good:#1faa5a;
+  --shadow:0 20px 60px -20px rgba(18,32,90,.35);
+  --maxw:1080px;
+}
+:root:not([data-theme="light"]){ }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#080c1c; --panel:#0f1730; --panel-2:#141d3c;
+    --ink:#eaeefb; --ink-soft:#9aa6cc; --hair:#26315a;
+    --indigo:#4f7bff; --indigo-deep:#0a1436; --royal:#5b86ff;
+    --gold:#f2b445; --gold-soft:#ffd479; --glow:rgba(242,180,69,.30);
+    --shadow:0 30px 80px -30px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#080c1c; --panel:#0f1730; --panel-2:#141d3c;
+  --ink:#eaeefb; --ink-soft:#9aa6cc; --hair:#26315a;
+  --indigo:#4f7bff; --indigo-deep:#0a1436; --royal:#5b86ff;
+  --gold:#f2b445; --gold-soft:#ffd479; --glow:rgba(242,180,69,.30);
+  --shadow:0 30px 80px -30px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.05;
+  text-wrap:balance;margin:0}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);font-weight:500}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
+  padding:14px 22px;border-radius:13px;border:none;cursor:pointer;text-decoration:none;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s}
+.btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#241500;
+  box-shadow:0 10px 30px -8px var(--glow)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--hair)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* top bar */
+header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
+  background:color-mix(in srgb,var(--ground) 78%,transparent);border-bottom:1px solid var(--hair)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;max-width:var(--maxw);margin:0 auto}
+.logo{display:flex;align-items:center;gap:11px;font-family:"Fraunces",serif;font-weight:600;font-size:20px}
+.logo img{width:34px;height:34px;border-radius:9px;box-shadow:0 6px 18px -6px var(--glow)}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:14.5px;color:var(--ink-soft)}
+.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--gold)}
+.nav-cta{padding:10px 16px;font-size:14px}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* hero */
+.hero{position:relative;padding:88px 0 60px;overflow:hidden}
+#motes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.hero h1{font-size:clamp(40px,6.4vw,68px);letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.lede{color:var(--ink-soft);font-size:clamp(17px,2.1vw,20px);margin:22px 0 12px;max-width:34ch}
+.trust{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 26px;font-family:"IBM Plex Mono",monospace;
+  font-size:12.5px;color:var(--ink-soft)}
+.trust span{border:1px solid var(--hair);border-radius:20px;padding:5px 12px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* hero visual */
+.stage{position:relative;aspect-ratio:1/1;max-width:420px;margin-inline:auto;width:100%}
+.orb{position:absolute;inset:8%;border-radius:50%;
+  background:radial-gradient(circle at 50% 42%, var(--gold-soft), transparent 62%);
+  filter:blur(6px);opacity:.55;animation:pulse 6s ease-in-out infinite}
+.bookcard{position:absolute;inset:16% 14%;border-radius:22px;
+  background:linear-gradient(160deg,var(--panel),var(--panel-2));
+  border:1px solid var(--hair);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;
+  transform:rotate(-4deg)}
+.bookcard .big{width:96px;height:96px;filter:drop-shadow(0 12px 26px var(--glow))}
+.bookcard .flow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-soft)}
+.chipm{position:absolute;padding:8px 13px;border-radius:12px;background:var(--panel);
+  border:1px solid var(--hair);font-size:12.5px;font-weight:600;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:7px}
+.chipm .d{width:8px;height:8px;border-radius:50%}
+.chipm.c1{top:6%;right:2%}.chipm.c1 .d{background:var(--royal)}
+.chipm.c2{bottom:12%;left:-4%}.chipm.c2 .d{background:var(--gold)}
+.chipm.c3{bottom:-2%;right:8%}.chipm.c3 .d{background:var(--good)}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.06);opacity:.72}}
+
+/* section scaffolding */
+section{padding:74px 0;position:relative}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,4vw,44px);margin-top:12px;letter-spacing:-.01em}
+.sec-head p{color:var(--ink-soft);margin-top:14px;font-size:18px}
+
+/* privacy thesis band */
+.thesis{background:linear-gradient(160deg,var(--indigo-deep),#0a1330);color:#eaeefb;
+  border-radius:26px;padding:54px 46px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.thesis::after{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-140px;
+  background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none}
+.thesis .eyebrow{color:var(--gold-soft)}
+.thesis h2{font-size:clamp(30px,4.4vw,50px);color:#fff;margin-top:14px;max-width:16ch}
+.thesis p{color:#b9c4ea;max-width:52ch;margin-top:18px;font-size:18px}
+.thesis .mono{font-family:"IBM Plex Mono",monospace;margin-top:26px;font-size:13.5px;color:var(--gold-soft);
+  display:flex;gap:20px;flex-wrap:wrap}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:26px}
+.step .n{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px;letter-spacing:.1em}
+.step h3{font-size:22px;margin:12px 0 8px}
+.step p{color:var(--ink-soft);font-size:15.5px;margin:0}
+
+/* features */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.feat{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.feat{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--hair);border-radius:16px;padding:24px;
+  transition:transform .15s, border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card .ic{font-size:24px}
+.card h3{font-size:19px;margin:12px 0 7px}
+.card p{color:var(--ink-soft);font-size:14.5px;margin:0}
+
+/* comparison */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:640px){.vs{grid-template-columns:1fr}}
+.vs .col{border-radius:18px;padding:28px;border:1px solid var(--hair)}
+.vs .them{background:var(--panel)}
+.vs .us{background:linear-gradient(160deg,var(--indigo-deep),#0a1330);color:#eaeefb;border-color:transparent;box-shadow:var(--shadow)}
+.vs h3{font-size:20px;margin-bottom:16px}
+.vs .us h3{color:#fff}
+.vs ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.vs li{display:flex;gap:11px;font-size:15px;align-items:flex-start}
+.vs .them li{color:var(--ink-soft)}
+.vs .us li{color:#c7d1f2}
+.mark{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:1px}
+.mark.no{background:rgba(226,83,66,.16);color:#e35342}
+.mark.yes{background:rgba(31,170,90,.2);color:#43d585}
+
+/* pricing */
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+@media(max-width:820px){.price{grid-template-columns:1fr}}
+.tier{background:var(--panel);border:1px solid var(--hair);border-radius:20px;padding:30px;display:flex;flex-direction:column}
+.tier.best{border-color:var(--gold);box-shadow:var(--shadow);position:relative}
+.tier.best::before{content:"BEST VALUE";position:absolute;top:-11px;left:30px;background:var(--gold);
+  color:#241500;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.1em;padding:4px 11px;border-radius:20px}
+.tier .name{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.tier .amt{font-family:"Fraunces",serif;font-size:46px;font-weight:600;margin:12px 0 2px;font-variant-numeric:tabular-nums}
+.tier .amt s{font-size:20px;color:var(--ink-soft);font-weight:400;margin-right:8px}
+.tier .amt span{font-size:16px;color:var(--ink-soft);font-family:"Manrope",sans-serif}
+.tier ul{list-style:none;padding:0;margin:18px 0 24px;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--ink-soft)}
+.tier li::before{content:"✓";color:var(--good);font-weight:700;margin-right:9px}
+.tier .btn{margin-top:auto;justify-content:center}
+
+/* faq */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:760px}
+details{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:18px 22px}
+details[open]{border-color:var(--gold)}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--ink-soft);margin:14px 0 0;font-size:15.5px}
+
+/* final cta */
+.final{text-align:center;background:linear-gradient(160deg,var(--indigo-deep),#0a1330);
+  border-radius:28px;padding:64px 30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.final::after{content:"";position:absolute;width:520px;height:520px;left:50%;top:-260px;transform:translateX(-50%);
+  background:radial-gradient(circle,var(--glow),transparent 62%)}
+.final h2{color:#fff;font-size:clamp(30px,5vw,50px);position:relative}
+.final p{color:#b9c4ea;margin:16px auto 30px;max-width:46ch;position:relative}
+.final .hero-cta{justify-content:center;position:relative}
+
+footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;color:var(--ink-soft);font-size:14px}
+.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot-note{font-family:"IBM Plex Mono",monospace;font-size:12px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .orb{animation:none}#motes{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* demo video */
+.demo-wrap{margin-top:8px}
+.demo-frame{background:var(--panel);border:1px solid var(--hair);border-radius:20px;padding:14px;box-shadow:var(--shadow);overflow:hidden}
+.demo-frame video{display:block;width:100%;height:auto;border-radius:12px;background:#0a1330;aspect-ratio:16/9}
+.demo-caption{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);margin-top:14px;text-align:center}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top"><img src="/icon.png" alt="Bindlore logo"> Bindlore</a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#demo">Demo</a>
+      <a href="#features">Features</a>
+      <a href="#why">Why private</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-gold nav-cta" href="#waitlist" aria-disabled="true">Coming soon to Chrome</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="motes"></canvas>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Chrome extension · 100% on-device</p>
+        <h1>Turn a book into an <em>AI skill.</em></h1>
+        <p class="lede">Bindlore converts books you own — PDF, EPUB, Word, even photos of paper pages — into ready-to-use Claude &amp; ChatGPT skills.</p>
+        <div class="trust">
+          <span>No account</span><span>No upload</span><span>No server</span><span>OCR runs on your device</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#waitlist">Get Bindlore — Coming soon</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="orb"></div>
+        <div class="bookcard">
+          <img class="big" src="/icon.png" alt="">
+          <span class="flow">book → skill</span>
+        </div>
+        <div class="chipm c1"><span class="d"></span>SKILL.md</div>
+        <div class="chipm c2"><span class="d"></span>on your Mac</div>
+        <div class="chipm c3"><span class="d"></span>nothing uploaded</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PRIVATE -->
+  <section id="why"><div class="wrap reveal">
+    <div class="thesis">
+      <p class="eyebrow">The whole point</p>
+      <h2>The book-to-AI tool that never sees your books.</h2>
+      <p>Other extractors screenshot your pages and ship them to their cloud to “process.” Bindlore doesn’t have a cloud. Parsing, OCR, and skill-building all happen inside your browser — your books, and everything you make from them, stay on your machine. Not even we can see them.</p>
+      <div class="mono"><span>› parsing: local</span><span>› OCR: local</span><span>› storage: your device</span><span>› our servers: none</span></div>
+    </div>
+  </div></section>
+
+  <!-- HOW -->
+  <section id="how"><div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Three steps</p>
+      <h2>Drop a book. Get something an AI can actually use.</h2>
+      <p>Not a raw text dump — a finished, structured skill with a <code>SKILL.md</code> and chapter references, ready to drop into Claude or Codex.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01 — ADD</div><h3>Drop a file or snap photos</h3><p>PDF, EPUB, Word, PowerPoint, TXT — or photos and scans of physical pages you own. Batch several at once.</p></div>
+      <div class="step reveal"><div class="n">02 — PREVIEW</div><h3>See it free</h3><p>Bindlore reads and splits the book into sections, pulls the title and author, and shows you a preview. No charge to look.</p></div>
+      <div class="step reveal"><div class="n">03 — EXPORT</div><h3>Get a real skill</h3><p>Download an AI Skill, Markdown, Word, or Text — plus optional AI summaries, key insights, and Anki flashcards.</p></div>
+    </div>
+  </div></section>
+
+
+  <!-- DEMO -->
+  <section id="demo"><div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">See it</p>
+      <h2>Book in. Skill out — on your device.</h2>
+      <p>A short walkthrough of Bindlore converting a book you own into a ready-to-use AI skill. Nothing leaves your machine.</p>
+    </div>
+    <div class="demo-wrap reveal">
+      <div class="demo-frame">
+        <video
+          src="/demo/bindlore-demo-16x9.mp4"
+          controls
+          muted
+          playsinline
+          preload="metadata"
+          aria-label="Bindlore product demo video">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="demo-caption">Product demo · plays muted with controls</p>
+    </div>
+  </div></section>
+
+  <!-- FEATURES -->
+  <section id="features"><div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What’s inside</p>
+      <h2>Built to make skills, not scrape text.</h2>
+    </div>
+    <div class="feat">
+      <div class="card reveal"><div class="ic">🔒</div><h3>On-device OCR</h3><p>Photograph a paper book you own; the text is recognized entirely on your machine. No image ever leaves your computer.</p></div>
+      <div class="card reveal"><div class="ic">🧩</div><h3>Finished skills</h3><p>A proper <code>SKILL.md</code> + chapter references — the thing an AI can actually search and cite, not a wall of text.</p></div>
+      <div class="card reveal"><div class="ic">📚</div><h3>Batch everything</h3><p>Drop a whole shelf of files at once and get one tidy bundle of skills back.</p></div>
+      <div class="card reveal"><div class="ic">✨</div><h3>AI summaries &amp; flashcards</h3><p>Optional chapter summaries, key-insight glossaries, and Anki decks — using your own OpenAI or Anthropic key.</p></div>
+      <div class="card reveal"><div class="ic">↔️</div><h3>Every format</h3><p>Export as Skill, Markdown, Word, or Text. One click to copy for AI, or jump straight into ChatGPT or Claude.</p></div>
+      <div class="card reveal"><div class="ic">🛡️</div><h3>Your content, your rights</h3><p>Works on books you own and public-domain titles. It refuses DRM by design — a converter, never a cracker.</p></div>
+    </div>
+  </div></section>
+
+  <!-- COMPARISON -->
+  <section id="compare"><div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The difference</p>
+      <h2>Same goal. Opposite philosophy.</h2>
+    </div>
+    <div class="vs reveal">
+      <div class="col them">
+        <h3>Typical “Kindle to text” tools</h3>
+        <ul>
+          <li><span class="mark no">✕</span> Screenshot your pages and send them to their cloud</li>
+          <li><span class="mark no">✕</span> Hand you raw, messy text to clean up yourself</li>
+          <li><span class="mark no">✕</span> Lean on defeating copy-protection — legally shaky</li>
+          <li><span class="mark no">✕</span> Your library passes through someone else’s server</li>
+        </ul>
+      </div>
+      <div class="col us">
+        <h3>Bindlore</h3>
+        <ul>
+          <li><span class="mark yes">✓</span> Everything runs on your device — no cloud, no server</li>
+          <li><span class="mark yes">✓</span> Hands you a finished, structured AI skill</li>
+          <li><span class="mark yes">✓</span> Works on files you own; refuses DRM by design</li>
+          <li><span class="mark yes">✓</span> Your books never leave your machine — not even to us</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- PRICING -->
+  <section id="pricing"><div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Price</p>
+      <h2>Preview free. Pass when you need the full skill.</h2>
+      <p>Try Bindlore with a free preview. Unlock full exports with a Bindlore pass — billed through ExtensionPay + Stripe.</p>
+    </div>
+    <div class="price">
+      <div class="tier reveal">
+        <div class="name">Preview</div>
+        <div class="amt">$0</div>
+        <ul><li>See title, author, and section split</li><li>Confirm the book looks right</li><li>No card required to look</li></ul>
+        <a class="btn btn-ghost" href="#waitlist">Coming soon to Chrome</a>
+      </div>
+      <div class="tier best reveal">
+        <div class="name">Monthly</div>
+        <div class="amt">$14<span>/mo</span></div>
+        <ul><li>Full AI Skill + Markdown/Word/Text exports</li><li>On-device OCR for scans and photos</li><li>Batch conversion</li><li>Optional AI extras with your own key</li></ul>
+        <a class="btn btn-gold" href="#waitlist">Coming soon to Chrome</a>
+      </div>
+      <div class="tier reveal">
+        <div class="name">Yearly</div>
+        <div class="amt">$89<span>/yr</span></div>
+        <ul><li>Everything in Monthly</li><li>Best value vs month-to-month</li><li>Same on-device privacy</li></ul>
+        <a class="btn btn-ghost" href="#waitlist">Coming soon to Chrome</a>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- FAQ -->
+  <section id="faq"><div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Questions</p><h2>The honest answers.</h2></div>
+    <div class="faq">
+      <details class="reveal"><summary>Does it work with Kindle?</summary><p>No — and that’s deliberate. Kindle books are DRM-protected, and Bindlore refuses DRM files on purpose. It converts books you own as DRM-free files (many stores let you download EPUB/PDF), public-domain titles, and your own documents and scans.</p></details>
+      <details class="reveal"><summary>Where do my books go?</summary><p>Nowhere. Parsing, OCR, and skill-building all run inside your browser. There is no Bindlore server for your content to touch. Your files never leave your device.</p></details>
+      <details class="reveal"><summary>Do I need an account?</summary><p>No account, no sign-up. You install the extension and drop in a book. That’s it.</p></details>
+      <details class="reveal"><summary>What about the AI summaries — where does my key go?</summary><p>The AI extras are optional and use your own OpenAI or Anthropic key, stored only on your device. Requests go straight from your browser to the provider you chose — never through us.</p></details>
+      <details class="reveal"><summary>What can I actually make?</summary><p>A ready-to-use AI skill (<code>SKILL.md</code> + chapter references), plus Markdown, Word, or plain text. Optionally: chapter summaries, a key-insight glossary, and Anki flashcards.</p></details>
+    </div>
+  </div></section>
+
+  <section><div class="wrap reveal">
+    <div class="final">
+      <h2>Own your books. Own your AI.</h2>
+      <p>Turn the books on your shelf into skills your AI can use — without handing your library to anyone.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#waitlist">Get Bindlore — Coming soon</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="waitlist"><div class="wrap reveal" style="text-align:center;padding-top:0">
+    <p class="eyebrow">Chrome Web Store</p>
+    <p style="color:var(--ink-soft);max-width:42ch;margin:12px auto 0;font-size:15.5px">Bindlore is not on the Chrome Web Store yet. CTAs above are placeholders until the extension is published — check back soon.</p>
+  </div></section>
+</main>
+
+<footer><div class="wrap foot-in">
+  <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
+  <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/privacy/">Privacy</a></div>
+</div></footer>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+// hero motes (rising gold particles), reduced-motion aware
+const rm=window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+if(!rm){
+  const c=document.getElementById("motes"),x=c.getContext("2d");let W,H,mo=[];
+  function size(){const r=c.getBoundingClientRect();W=c.width=r.width;H=c.height=r.height;}
+  function gold(){const cs=getComputedStyle(document.documentElement).getPropertyValue("--gold-soft").trim()||"#f2b445";return cs;}
+  function seed(){mo=[];const n=Math.min(46,Math.floor(W/26));for(let i=0;i<n;i++)mo.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2.2+.6,s:Math.random()*.5+.15,a:Math.random()*.5+.2});}
+  function draw(){x.clearRect(0,0,W,H);const col=gold();for(const p of mo){p.y-=p.s;if(p.y<-6){p.y=H+6;p.x=Math.random()*W;}x.beginPath();x.globalAlpha=p.a;x.fillStyle=col;x.arc(p.x,p.y,p.r,0,7);x.fill();}x.globalAlpha=1;requestAnimationFrame(draw);}
+  size();seed();draw();
+  addEventListener("resize",()=>{size();seed();});
+}
+</script>
+
+</body>
+</html>
