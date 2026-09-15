@@ -17,9 +17,11 @@ No build step is required — serve `index.html` from the root.
 
 Place the 16:9 MP4 at `public/demo/bindlore-demo-16x9.mp4` (or `demo/bindlore-demo-16x9.mp4` at the site root). The landing page references `/demo/bindlore-demo-16x9.mp4` with muted controls and `playsinline` — no autoplay with sound.
 
-## Coming soon CTA
+## Chrome Web Store CTA
 
-The Chrome Web Store listing is **not live yet**. All primary CTAs say **Coming soon** and link to `#waitlist`. Do not point them at a Chrome Web Store URL until the extension is published; then swap the hrefs and button copy.
+The extension is live. Primary CTAs say **Add to Chrome** or **Get Bindlore free** and link to:
+
+https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh
 
 ## Files
 
