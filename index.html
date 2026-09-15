@@ -209,6 +209,118 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
 }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Bindlore",
+      "url": "https://bindlore.app",
+      "description": "Bindlore is a free Chrome extension that turns books you own into on-device AI skills for Claude, Codex, and other agents that read Markdown.",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome on macOS, Windows, Linux, and ChromeOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "downloadUrl": "https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh",
+      "featureList": [
+        "Core convert is free with no account required",
+        "Parses and builds skills on-device in the browser",
+        "No Bindlore cloud for book content on the core path",
+        "Refuses DRM-locked files by design",
+        "Exports AI Skill (SKILL.md plus references), Markdown, Word, and Text"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bindlore",
+        "url": "https://bindlore.app"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "Bindlore",
+      "url": "https://bindlore.app",
+      "founder": {
+        "@type": "Person",
+        "name": "Deimira Baidoo"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Bindlore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bindlore is a free Chrome extension that turns books you own into on-device AI skills (SKILL.md) for Claude, Codex, and other agents that read Markdown."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Bindlore upload my books?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. On the core convert path, parsing and skill-building run in your browser on your device. There is no Bindlore cloud for book content on that path."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Bindlore require an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account is required for the core convert path."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Bindlore free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The core convert path is free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file types does Bindlore support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Supported inputs include PDF, EPUB, Word, PowerPoint, TXT, and photos or scans with on-device OCR. Export options include AI Skill (SKILL.md plus references), Markdown, Word, or Text."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Bindlore work with DRM-locked files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. DRM-locked files are refused on purpose. Bindlore is a converter for content you have the right to use, not a DRM workaround."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does optional AI (summaries, glossary, Anki) run?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Optional AI extras use your own OpenAI or Anthropic API key. Requests go from your browser to the provider, not through a Bindlore book-content cloud."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I install Bindlore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install from the Chrome Web Store at https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh. Learn more at https://bindlore.app."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -221,6 +333,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <a href="#demo">Demo</a>
       <a href="#pricing">Free</a>
       <a href="#faq">FAQ</a>
+      <a href="/press/">Press</a>
       <a href="/privacy/">Privacy</a>
     </nav>
     <a class="btn btn-gold nav-cta" href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Add to Chrome</a>
@@ -370,12 +483,15 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <section id="faq"><div class="wrap">
     <div class="sec-head reveal"><p class="eyebrow">Questions</p><h2>The honest answers.</h2></div>
     <div class="faq">
-      <details class="reveal"><summary>Does Bindlore work with Kindle / DRM books?</summary><p>No — on purpose. Bindlore refuses DRM-locked files. It converts DRM-free files you own (many stores let you download EPUB/PDF), public-domain titles, and your own documents and scans. Converter for content you have the right to use — not a DRM workaround.</p></details>
-      <details class="reveal"><summary>Where do my books go? Does Bindlore see them?</summary><p>Nowhere off your machine. Parsing, OCR, and skill-building run inside your browser. There is no Bindlore server for your book content. Your files never leave your device.</p></details>
-      <details class="reveal"><summary>Do I need an OpenAI or Anthropic key?</summary><p>Not for the core skill export. Optional extras (summaries, glossary, Anki) use your own key, stored only on your device. Requests go straight from your browser to the provider — never through Bindlore.</p></details>
-      <details class="reveal"><summary>Can my agents use it?</summary><p>Yes. The output is a standard <code>SKILL.md</code> folder with one reference file per chapter. Claude Code, Cowork, Claude Projects, and Codex load it directly. Other agent tools can read it as plain Markdown files.</p></details>
-      <details class="reveal"><summary>Is it really free?</summary><p>Yes. Every format, on-device OCR, batch conversion. Paid extras may come later, and the core stays free.</p></details>
-      <details class="reveal"><summary>Do I need an account?</summary><p>No account. No sign-up. <a href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Add Bindlore from the Chrome Web Store</a>. Drop a book.</p></details>
+      <details class="reveal"><summary>What is Bindlore?</summary><p>Bindlore is a free Chrome extension that turns books you own into on-device AI skills (<code>SKILL.md</code>) for Claude, Codex, and other agents that read Markdown.</p></details>
+      <details class="reveal"><summary>Does Bindlore upload my books?</summary><p>No. On the core convert path, parsing and skill-building run in your browser on your device. There is no Bindlore cloud for book content on that path.</p></details>
+      <details class="reveal"><summary>Does Bindlore require an account?</summary><p>No account is required for the core convert path.</p></details>
+      <details class="reveal"><summary>Is Bindlore free?</summary><p>Yes. The core convert path is free.</p></details>
+      <details class="reveal"><summary>What file types does Bindlore support?</summary><p>Supported inputs include PDF, EPUB, Word, PowerPoint, TXT, and photos or scans (on-device OCR). Export options include AI Skill (<code>SKILL.md</code> + references), Markdown, Word, or Text.</p></details>
+      <details class="reveal"><summary>Does Bindlore work with Kindle DRM / DRM-locked files?</summary><p>No. DRM-locked files are refused on purpose. Bindlore is a converter for content you have the right to use, not a DRM workaround or cracker.</p></details>
+      <details class="reveal"><summary>Where does optional AI (summaries, glossary, Anki) run?</summary><p>Optional AI extras use your own OpenAI or Anthropic API key. Requests go from your browser to the provider, not through a Bindlore book-content cloud.</p></details>
+      <details class="reveal"><summary>Where can I install Bindlore?</summary><p>Install from the <a href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Chrome Web Store</a>. More info at <a href="https://bindlore.app">bindlore.app</a>.</p></details>
+      <details class="reveal"><summary>What is a Bindlore “AI skill”?</summary><p>An export package with a <code>SKILL.md</code> file plus chapter and section reference files, structured so Claude, Codex, and similar agents can search, quote, and reason over a book you provided.</p></details>
     </div>
   </div></section>
 
@@ -395,7 +511,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <p class="ps-strip"><strong>P.S.</strong> Bindlore is free on the <a href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Chrome Web Store</a>. Books you own, turned into on-device AI skills for Claude, Codex, and your own agents.</p>
   <div class="foot-in">
     <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
-    <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/privacy/">Privacy</a></div>
+    <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/press/">Press</a> · <a href="/privacy/">Privacy</a></div>
   </div>
 </div></footer>
 
