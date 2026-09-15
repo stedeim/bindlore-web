@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Turn books you own into AI skills for Claude, Codex, and your own agents. Free. Runs on your device. Nothing uploaded. DRM refused.">
 <title>Bindlore</title>
+<link rel="canonical" href="https://bindlore.app/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -209,6 +210,57 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
 }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bindlore.app/#organization",
+      "name": "Bindlore",
+      "url": "https://bindlore.app",
+      "founder": {
+        "@type": "Person",
+        "name": "Deimira Baidoo"
+      },
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Calgary, Alberta, Canada"
+      },
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://bindlore.app/#software",
+      "name": "Bindlore",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Chrome",
+      "url": "https://bindlore.app",
+      "downloadUrl": "https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh",
+      "description": "Free Chrome extension that turns books you own into on-device AI skills (SKILL.md) for Claude, Codex, and other agents. Core parsing and OCR run in the browser on your device.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "On-device parsing and OCR",
+        "No Bindlore cloud for book content on the core path",
+        "Exports AI Skill (SKILL.md plus chapter references), Markdown, Word, and Text",
+        "Supports PDF, EPUB, Word, PowerPoint, TXT, and photos/scans",
+        "Refuses DRM-locked files on purpose",
+        "No account required for core convert"
+      ],
+      "publisher": {
+        "@id": "https://bindlore.app/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -221,6 +273,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <a href="#demo">Demo</a>
       <a href="#pricing">Free</a>
       <a href="#faq">FAQ</a>
+      <a href="/press/">Press</a>
       <a href="/privacy/">Privacy</a>
     </nav>
     <a class="btn btn-gold nav-cta" href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Add to Chrome</a>
@@ -369,6 +422,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <!-- FAQ -->
   <section id="faq"><div class="wrap">
     <div class="sec-head reveal"><p class="eyebrow">Questions</p><h2>The honest answers.</h2></div>
+    <p class="reveal" style="margin:0 0 16px;color:var(--ink-soft)">Looking for launch details, canonical facts, and media notes? Read the <a href="/press/">Bindlore press page</a>.</p>
     <div class="faq">
       <details class="reveal"><summary>Does Bindlore work with Kindle / DRM books?</summary><p>No — on purpose. Bindlore refuses DRM-locked files. It converts DRM-free files you own (many stores let you download EPUB/PDF), public-domain titles, and your own documents and scans. Converter for content you have the right to use — not a DRM workaround.</p></details>
       <details class="reveal"><summary>Where do my books go? Does Bindlore see them?</summary><p>Nowhere off your machine. Parsing, OCR, and skill-building run inside your browser. There is no Bindlore server for your book content. Your files never leave your device.</p></details>
@@ -395,7 +449,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <p class="ps-strip"><strong>P.S.</strong> Bindlore is free on the <a href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Chrome Web Store</a>. Books you own, turned into on-device AI skills for Claude, Codex, and your own agents.</p>
   <div class="foot-in">
     <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
-    <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/privacy/">Privacy</a></div>
+    <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/press/">Press</a> · <a href="/privacy/">Privacy</a></div>
   </div>
 </div></footer>
 
