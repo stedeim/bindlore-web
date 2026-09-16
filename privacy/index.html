@@ -27,18 +27,33 @@ p b,li b{color:var(--ink)}
 ul{padding-left:22px}
 footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--hair);color:var(--soft);font-size:14px}
 </style>
+<!-- Vercel Web Analytics (official HTML snippet). Page views + utm_* stay on the URL. -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/js/analytics.js"></script>
 </head>
 <body>
 <div class="wrap">
   <a class="top" href="/"><span>📖</span> Bindlore</a>
 
   <h1>Privacy Policy</h1>
-  <p class="date">Last updated: September 2026</p>
+  <p class="date">Last updated: September 16, 2026</p>
 
-  <div class="callout"><p><b>The short version:</b> Bindlore runs entirely on your device. We have no server. Your books, and everything you make from them, never leave your computer, not even to us.</p></div>
+  <div class="callout"><p><b>The short version:</b> The Bindlore Chrome extension runs entirely on your device. Your books, and everything you make from them, never leave your computer, not even to us. This marketing website uses privacy-safe Vercel Web Analytics for page views, campaign tags, and Chrome Web Store clicks only — never book or file content.</p></div>
 
   <h2>What we collect</h2>
-  <p><b>Nothing about the content of your books.</b> Every file you open is processed entirely inside your own browser. Your books, their text, and the files Bindlore generates are never uploaded to us or to anyone else. We do not collect personal information, browsing history, or usage analytics.</p>
+  <p><b>Nothing about the content of your books.</b> Every file you open in the Bindlore extension is processed entirely inside your own browser. Your books, their text, and the files Bindlore generates are never uploaded to us or to anyone else. The extension does not collect personal information, browsing history, or usage analytics.</p>
+
+  <h2>This website (bindlore.app)</h2>
+  <p>The public marketing site is hosted on Vercel and uses <b>Vercel Web Analytics</b> (not Google Analytics) for:</p>
+  <ul>
+    <li>page views</li>
+    <li>UTM source, medium, and campaign (left on the URL; we do not strip <code>utm_*</code> parameters)</li>
+    <li>clicks to the Chrome Web Store / Add to Chrome (custom event name <code>cws_click</code>)</li>
+  </ul>
+  <p>We do <b>not</b> collect book content, file names, uploaded documents, extension internals, or other user-content. We do not use Meta Pixel, Google Ads, or GA4 on this site.</p>
 
   <h2>What is stored on your device</h2>
   <ul>
