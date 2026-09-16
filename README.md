@@ -13,6 +13,12 @@ Repo target: `stedeim/bindlore-web`
 
 No build step is required — serve `index.html` from the root.
 
+## Analytics
+
+Privacy-safe **Vercel Web Analytics** on every marketing page (`/`, `/press/`, `/privacy/`). Official HTML snippet (`/_vercel/insights/script.js`) plus `/js/analytics.js` for Chrome Web Store click events named `cws_click`.
+
+Enable Web Analytics in the Vercel project dashboard after deploy. Do **not** add Google Analytics / gtag / GA4, Meta Pixel, or Google Ads. Do **not** strip `utm_*` from URLs. Do **not** send book content, file names, or other user-content as event properties.
+
 ## Demo video
 
 Place the 16:9 MP4 at `public/demo/bindlore-demo-16x9.mp4` (or `demo/bindlore-demo-16x9.mp4` at the site root). The landing page references `/demo/bindlore-demo-16x9.mp4` with muted controls and `playsinline` — no autoplay with sound.
@@ -28,7 +34,9 @@ https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgf
 | Path | Purpose |
 |------|---------|
 | `index.html` | Landing page |
+| `press/index.html` | Press / launch release |
 | `privacy/index.html` | Privacy policy |
 | `icon.png` | Brand icon (256×256) |
 | `demo/bindlore-demo-16x9.mp4` | Product demo (add before go-live) |
+| `js/analytics.js` | CWS click event (`cws_click`) for Vercel Analytics |
 | `vercel.json` | Vercel clean URLs / trailing slash |
