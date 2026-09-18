@@ -1,0 +1,58 @@
+:root{--ground:#f4f6fb;--panel:#fff;--ink:#101528;--soft:#4a5270;--hair:#dbe1f0;--gold:#e2951a;--indigo:#2b52d6;--deep:#12205a}
+@media(prefers-color-scheme:dark){:root{--ground:#080c1c;--panel:#0f1730;--ink:#eaeefb;--soft:#9aa6cc;--hair:#26315a;--gold:#f2b445;--indigo:#5b86ff;--deep:#0a1436}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:var(--indigo)}
+.wrap{max-width:840px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--ground) 78%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:"Fraunces",serif;font-weight:600;font-size:20px}
+.logo img{width:32px;height:32px;border-radius:9px}
+.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px}
+.btn-ghost{border:1px solid var(--hair);color:var(--ink)}
+.btn-gold{background:linear-gradient(180deg,#f2b445,var(--gold));color:#241500}
+main{padding:38px 0 70px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+h1{font-size:clamp(32px,5vw,48px);margin-bottom:12px;letter-spacing:-.01em}
+h2{font-size:28px;margin-top:38px;margin-bottom:10px}
+h3{font-size:22px;margin-top:30px;margin-bottom:8px}
+p{margin:0 0 16px}
+.lede{font-size:18px;color:var(--soft)}
+.dateline{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--gold);margin:8px 0 20px}
+.kicker{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--gold);margin:0 0 10px}
+.panel{background:var(--panel);border:1px solid var(--hair);border-radius:16px;padding:22px}
+.panel p:last-child{margin-bottom:0}
+ul{padding-left:22px;margin:0 0 18px}
+li{margin:0 0 8px;color:var(--soft)}
+li strong,p strong{color:var(--ink)}
+.muted{color:var(--soft)}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--soft)}
+blockquote{margin:0 0 18px;padding:18px;border-left:4px solid var(--gold);background:var(--panel);border-radius:10px}
+blockquote p:last-child{margin-bottom:0}
+code{font-family:"IBM Plex Mono",monospace;font-size:.92em}
+.crumbs{font-size:14px;color:var(--soft);margin:0 0 18px}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.angles{display:grid;gap:12px;margin:8px 0 28px}
+.angle{display:block;background:var(--panel);border:1px solid var(--hair);border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.angle:hover{border-color:var(--gold);transform:translateY(-1px)}
+.angle .meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.angle strong{display:block;font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;line-height:1.25;margin:0 0 6px;color:var(--ink)}
+.angle p{margin:0;color:var(--soft);font-size:15px}
+.facts{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:15.5px}
+.facts th,.facts td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--hair)}
+.facts th{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);font-weight:500;width:34%}
+.facts td{color:var(--soft)}
+.quotes{counter-reset:q}
+.quotes li{list-style:none}
+.quotes{padding-left:0}
+.quotes li{position:relative;padding-left:28px}
+.quotes li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:0;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold)}
+.contact-line{font-size:16.5px}
+.note{font-size:14px;color:var(--soft);margin-top:28px}
+footer{border-top:1px solid var(--hair);padding:26px 0 42px;color:var(--soft);font-size:14px}
+@media(max-width:560px){
+  .facts th,.facts td{display:block;width:auto;padding:6px 0}
+  .facts th{border-bottom:none;padding-top:12px}
+}
