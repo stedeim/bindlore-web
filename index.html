@@ -3,8 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Turn books you own into AI skills for Claude, Codex, and your own agents. Free. Runs on your device. Nothing uploaded. DRM refused.">
-<title>Bindlore</title>
+<meta name="description" content="Turn books you own into AI skills Claude and Codex can cite. Free. Runs on your device. No cloud, no account. DRM refused.">
+<title>Bindlore - turn books you own into AI skills, on-device</title>
+<link rel="canonical" href="https://bindlore.app/">
+<meta property="og:title" content="Bindlore: your books, your AI, your machine">
+<meta property="og:description" content="Free Chrome extension. Turns PDFs, EPUBs and docs you own into skills Claude and Codex can cite. Runs on your device. No cloud, no account.">
+<meta property="og:image" content="https://bindlore.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bindlore product UI. Your books, your AI, your machine.">
+<meta property="og:url" content="https://bindlore.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bindlore: your books, your AI, your machine">
+<meta name="twitter:description" content="Free Chrome extension. Turns PDFs, EPUBs and docs you own into skills Claude and Codex can cite. Runs on your device. No cloud, no account.">
+<meta name="twitter:image" content="https://bindlore.app/og.png">
+<meta name="twitter:image:alt" content="Bindlore product UI. Your books, your AI, your machine.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -71,7 +85,7 @@ header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
 /* hero */
 .hero{position:relative;padding:88px 0 60px;overflow:hidden}
 #motes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.9}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start;position:relative;z-index:2}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}}
 .hero h1{font-size:clamp(40px,6.4vw,68px);letter-spacing:-.01em}
 .hero h1 em{font-style:italic;color:var(--gold)}
@@ -80,28 +94,18 @@ header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
   font-size:12.5px;color:var(--ink-soft)}
 .trust span{border:1px solid var(--hair);border-radius:20px;padding:5px 12px}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-links{margin:14px 0 0;font-size:14.5px;color:var(--ink-soft)}
+.hero-links a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.hero-links a:hover{color:var(--gold)}
 
-/* hero visual */
-.stage{position:relative;aspect-ratio:1/1;max-width:420px;margin-inline:auto;width:100%}
-.orb{position:absolute;inset:8%;border-radius:50%;
-  background:radial-gradient(circle at 50% 42%, var(--gold-soft), transparent 62%);
-  filter:blur(6px);opacity:.55;animation:pulse 6s ease-in-out infinite}
-.bookcard{position:absolute;inset:16% 14%;border-radius:22px;
-  background:linear-gradient(160deg,var(--panel),var(--panel-2));
-  border:1px solid var(--hair);box-shadow:var(--shadow);
-  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;
-  transform:rotate(-4deg)}
-.bookcard .big{width:96px;height:96px;filter:drop-shadow(0 12px 26px var(--glow))}
-.bookcard .flow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-soft)}
-.chipm{position:absolute;padding:8px 13px;border-radius:12px;background:var(--panel);
-  border:1px solid var(--hair);font-size:12.5px;font-weight:600;box-shadow:var(--shadow);
-  display:flex;align-items:center;gap:7px}
-.chipm .d{width:8px;height:8px;border-radius:50%}
-.chipm.c1{top:6%;right:2%}.chipm.c1 .d{background:var(--royal)}
-.chipm.c2{bottom:12%;left:-4%}.chipm.c2 .d{background:var(--gold)}
-.chipm.c3{bottom:-2%;right:8%}.chipm.c3 .d{background:var(--good)}
-@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.06);opacity:.72}}
+/* product UI */
+.product-ui{margin:0;display:flex;flex-direction:column;gap:10px}
+.product-ui img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--hair);
+  box-shadow:var(--shadow);background:var(--panel)}
+.shot-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.shot-pair{grid-template-columns:1fr}}
+.product-ui figcaption{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-soft);text-align:center}
 
 /* section scaffolding */
 section{padding:74px 0;position:relative}
@@ -188,6 +192,23 @@ details p{color:var(--ink-soft);margin:14px 0 0;font-size:15.5px}
 .final h2{color:#fff;font-size:clamp(30px,5vw,50px);position:relative}
 .final p{color:#b9c4ea;margin:16px auto 30px;max-width:46ch;position:relative}
 .final .hero-cta{justify-content:center;position:relative}
+.final-links{position:relative;margin:16px 0 0;font-size:14.5px}
+.final-links a{color:#b9c4ea;text-decoration:underline;text-underline-offset:3px}
+.final-links a:hover{color:var(--gold-soft)}
+
+.updates{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;
+  background:var(--panel);border:1px solid var(--hair);border-radius:22px;padding:32px}
+@media(max-width:760px){.updates{grid-template-columns:1fr}}
+.updates h2{font-size:clamp(26px,3.4vw,36px);margin-top:8px}
+.updates p{color:var(--ink-soft);margin:10px 0 0}
+.updates-form{display:flex;flex-direction:column;gap:10px}
+.updates-form label{font-size:13px;font-weight:600}
+.updates-form input{font:inherit;font-size:15px;padding:12px 14px;border-radius:12px;
+  border:1px solid var(--hair);background:var(--ground);color:var(--ink)}
+.updates-form .btn{justify-content:center}
+.also-from{margin:14px 0 0;font-size:14px;color:var(--ink-soft)}
+.also-from a{color:var(--ink-soft)}
+.also-from a:hover{color:var(--gold)}
 
 footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;color:var(--ink-soft);font-size:14px}
 .foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
@@ -204,7 +225,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
-  .orb{animation:none}#motes{display:none}
+  #motes{display:none}
   html{scroll-behavior:auto}
 }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
@@ -361,19 +382,17 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
         <div class="hero-cta">
           <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Get Bindlore free</a>
           <a class="btn btn-ghost" href="#demo">See the demo</a>
-          <a class="btn btn-ghost" href="/privacy/">Privacy</a>
         </div>
+        <p class="hero-links"><a href="/sample/">See what a skill looks like</a> <span aria-hidden="true">·</span> <a href="/privacy/">Privacy</a></p>
       </div>
-      <div class="stage" aria-hidden="true">
-        <div class="orb"></div>
-        <div class="bookcard">
-          <img class="big" src="/icon.png" alt="">
-          <span class="flow">book → skill</span>
+      <figure class="product-ui">
+        <img src="/shots/drop.png" width="1280" height="656" alt="Bindlore product UI: drop a PDF, EPUB, or document you own.">
+        <div class="shot-pair">
+          <img src="/shots/preview.png" width="1280" height="656" alt="Bindlore product UI: preview title, author, and sections before export.">
+          <img src="/shots/export-skill.png" width="1280" height="656" alt="Bindlore product UI: an AI skill folder exported on this device.">
         </div>
-        <div class="chipm c1"><span class="d"></span>SKILL.md</div>
-        <div class="chipm c2"><span class="d"></span>on your Mac</div>
-        <div class="chipm c3"><span class="d"></span>nothing uploaded</div>
-      </div>
+        <figcaption>Product UI</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -507,8 +526,24 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <p>Turn the shelf you already paid for into skills your AI agents can use, without handing your library to anyone.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Add to Chrome</a>
-        <a class="btn btn-ghost" href="/privacy/" style="border-color:rgba(255,255,255,.25);color:#eaeefb">Privacy</a>
       </div>
+      <p class="final-links"><a href="/privacy/">Privacy</a></p>
+  </div>
+</div></section>
+
+  <section id="updates"><div class="wrap reveal">
+    <div class="updates">
+      <div>
+        <p class="eyebrow">Get updates</p>
+        <h2>Hear when Bindlore ships something new.</h2>
+        <p>No account. Submitting opens your email app with the subject “Bindlore updates.”</p>
+      </div>
+      <!-- TODO: replace with Kit form action -->
+      <form class="updates-form" action="mailto:stedeim@gmail.com?subject=Bindlore%20updates" method="post" enctype="text/plain">
+        <label for="updates-email">Email</label>
+        <input id="updates-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" inputmode="email">
+        <button class="btn btn-gold" type="submit">Get updates</button>
+      </form>
     </div>
   </div></section>
 </main>
@@ -519,6 +554,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
     <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/press/">Press</a> · <a href="/privacy/">Privacy</a></div>
   </div>
+  <p class="also-from">Also from the maker: <a href="https://wordhaven.com">Wordhaven</a></p>
 </div></footer>
 
 <script>
@@ -537,6 +573,16 @@ if(!rm){
   size();seed();draw();
   addEventListener("resize",()=>{size();seed();});
 }
+document.querySelectorAll("form.updates-form").forEach(function (form) {
+  form.addEventListener("submit", function (event) {
+    var input = form.querySelector('input[type="email"]');
+    var email = input && input.value ? input.value.trim() : "";
+    if (!email) return;
+    event.preventDefault();
+    var body = "Please send Bindlore updates to " + email + ".";
+    window.location.href = "mailto:stedeim@gmail.com?subject=" + encodeURIComponent("Bindlore updates") + "&body=" + encodeURIComponent(body);
+  });
+});
 </script>
 
 </body>
