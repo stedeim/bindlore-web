@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Turn books you own into AI skills Claude and Codex can cite. Free. Runs on your device. No cloud, no account. DRM refused.">
+<meta name="description" content="Turn books you own into AI skills Claude and Codex can cite. Free. Core conversion runs in your browser. No account. DRM refused.">
 <title>Bindlore - turn books you own into AI skills, on-device</title>
 <link rel="canonical" href="https://bindlore.app/">
 <meta property="og:title" content="Bindlore: your books, your AI, your machine">
-<meta property="og:description" content="Free Chrome extension. Turns PDFs, EPUBs and docs you own into skills Claude and Codex can cite. Runs on your device. No cloud, no account.">
+<meta property="og:description" content="Free Chrome extension. Turns PDFs, EPUBs and docs you own into skills Claude and Codex can cite. Core conversion runs in your browser. No account.">
 <meta property="og:image" content="https://bindlore.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bindlore: your books, your AI, your machine">
-<meta name="twitter:description" content="Free Chrome extension. Turns PDFs, EPUBs and docs you own into skills Claude and Codex can cite. Runs on your device. No cloud, no account.">
+<meta name="twitter:description" content="Free Chrome extension. Turns PDFs, EPUBs and docs you own into skills Claude and Codex can cite. Core conversion runs in your browser. No account.">
 <meta name="twitter:image" content="https://bindlore.app/og.png">
 <meta name="twitter:image:alt" content="Bindlore product UI. Your books, your AI, your machine.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,7 +192,7 @@ details p{color:var(--ink-soft);margin:14px 0 0;font-size:15.5px}
 .final{text-align:center;background:linear-gradient(160deg,var(--indigo-deep),#0a1330);
   border-radius:28px;padding:64px 30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .final::after{content:"";position:absolute;width:520px;height:520px;left:50%;top:-260px;transform:translateX(-50%);
-  background:radial-gradient(circle,var(--glow),transparent 62%)}
+  background:radial-gradient(circle,var(--glow),transparent 62%);pointer-events:none}
 .final h2{color:#fff;font-size:clamp(30px,5vw,50px);position:relative}
 .final p{color:#b9c4ea;margin:16px auto 30px;max-width:46ch;position:relative}
 .final .hero-cta{justify-content:center;position:relative}
@@ -377,9 +377,9 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
     <canvas id="motes"></canvas>
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Chrome extension · 100% on-device</p>
+        <p class="eyebrow">Chrome extension · Core conversion on-device</p>
         <h1>Your books. Your AI. Your machine.</h1>
-        <p class="lede">Bindlore turns books you own (PDF, EPUB, Word, PowerPoint, text, even photos of paper pages) into ready-made skills your AI agents can use: Claude, Codex, or any agent that reads Markdown. Parsing, OCR, and skill-building run in your browser. There is no Bindlore cloud for your library to touch.</p>
+        <p class="lede">Bindlore turns books you own (PDF, EPUB, Word, PowerPoint, text, even photos of paper pages) into ready-made skills your AI agents can use: Claude, Codex, or any agent that reads Markdown. Parsing, OCR, and skill-building run in your browser. Core conversion runs in your browser, so your library stays on your device.</p>
         <div class="trust">
           <span>Free</span><span>On-device</span><span>Works with your agents</span><span>DRM-free files only</span>
         </div>
@@ -482,10 +482,10 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <div class="col us">
         <h3>Bindlore</h3>
         <ul>
-          <li><span class="mark yes">✓</span> Everything on your device — no cloud for book content</li>
+          <li><span class="mark yes">✓</span> Core conversion on your device. No Bindlore cloud for book content.</li>
           <li><span class="mark yes">✓</span> A finished, structured AI skill</li>
           <li><span class="mark yes">✓</span> Works on files you own; refuses DRM by design</li>
-          <li><span class="mark yes">✓</span> Your books never leave — not even to us</li>
+          <li><span class="mark yes">✓</span> Book content isn't sent to a Bindlore server</li>
         </ul>
       </div>
     </div>
@@ -556,7 +556,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
   <p class="ps-strip"><strong>P.S.</strong> Bindlore is free on the <a href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Chrome Web Store</a>. Books you own, turned into on-device AI skills for Claude, Codex, and your own agents.</p>
   <div class="foot-in">
     <div class="logo" style="font-size:17px"><img src="/icon.png" alt="" style="width:26px;height:26px"> Bindlore</div>
-    <div class="foot-note">Made for people who own their books · Everything runs on your device · <a href="/press/">Press</a> · <a href="/privacy/">Privacy</a></div>
+    <div class="foot-note">Made for people who own their books · Core conversion runs in your browser · <a href="/press/">Press</a> · <a href="/privacy/">Privacy</a></div>
   </div>
   <p class="also-from">Also from the maker: <a href="https://wordhaven.io">Wordhaven</a></p>
 </div></footer>
