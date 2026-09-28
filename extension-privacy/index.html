@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bindlore Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Bindlore Chrome extension.">
+<link rel="canonical" href="https://bindlore.app/extension-privacy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:#f4f6fb;--panel:#fff;--ink:#101528;--soft:#4a5270;--hair:#dbe1f0;--gold:#e2951a;--indigo:#2b52d6}
+@media(prefers-color-scheme:dark){:root{--ground:#080c1c;--panel:#0f1730;--ink:#eaeefb;--soft:#9aa6cc;--hair:#26315a;--gold:#f2b445;--indigo:#5b86ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.65}
+.wrap{max-width:720px;margin:0 auto;padding:40px 22px 80px}
+a{color:var(--indigo)}
+.top{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-weight:600;font-size:20px;text-decoration:none;color:var(--ink);margin-bottom:34px}
+.top span{width:30px;height:30px;border-radius:8px;background:linear-gradient(150deg,#2b52d6,#12205a);display:grid;place-items:center;font-size:15px}
+h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(30px,5vw,42px);margin:0 0 6px;line-height:1.1}
+.date{color:var(--soft);font-size:14px;margin-bottom:28px}
+h2{font-family:"Fraunces",serif;font-weight:600;font-size:22px;margin:34px 0 8px}
+p,li{color:var(--soft)}
+p b,li b{color:var(--ink)}
+.callout{background:var(--panel);border:1px solid var(--hair);border-left:4px solid var(--gold);border-radius:12px;padding:16px 18px;margin:22px 0}
+.callout p{margin:0;color:var(--ink)}
+ul{padding-left:22px}
+footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--hair);color:var(--soft);font-size:14px}
+</style>
+<!-- Vercel Web Analytics (official HTML snippet). Page views + utm_* stay on the URL. -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/js/analytics.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <a class="top" href="/"><span>📖</span> Bindlore</a>
+
+  <h1>Bindlore Privacy Policy</h1>
+  <p class="date"><em>Last updated: September 28, 2026</em></p>
+
+  <p>Core conversion runs in your browser; files are not uploaded to Bindlore.</p>
+
+  <h2>What we collect</h2>
+  <p><b>Nothing.</b> Bindlore has no account system and does not send your files, their text, or the files it generates to Bindlore. The core conversion (reading, OCR, splitting into sections, and building your download) runs inside your own browser.</p>
+
+  <h2>What is stored locally</h2>
+  <ul>
+    <li>Your <b>AI settings</b> (provider choice, model, and your own API key, if you enter one) are stored in your browser via <code>chrome.storage.local</code>. They are never sent to Bindlore.</li>
+  </ul>
+
+  <h2>Optional AI extras (off unless you turn them on)</h2>
+  <p>If you add your own OpenAI or Anthropic API key and tick an AI extra (summaries, key insights &amp; glossary, or flashcards), Bindlore sends text excerpts from the book you are converting, together with your key, <b>directly from your browser</b> to the provider you chose (<code>api.openai.com</code> or <code>api.anthropic.com</code>). Bindlore does not see, relay, or store that traffic. The provider processes it under its own terms and privacy policy.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><code>storage</code>, to remember your AI settings in your browser (<code>chrome.storage.local</code>).</li>
+    <li>Host access to <code>api.openai.com</code> and <code>api.anthropic.com</code>, used only for the optional AI extras described above, and only when you turn them on with your own key.</li>
+  </ul>
+
+  <h2>Your responsibility</h2>
+  <p>Bindlore is a tool for converting DRM-free files you have the right to use, or public-domain works, for your personal use. Owning a copy of a book does not by itself give you every right to process it. You are responsible for having the rights to any file you convert. Bindlore refuses DRM-protected files and does not remove copy protection.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:info@agencycrusade.com">info@agencycrusade.com</a></p>
+
+  <footer>Bindlore · Core conversion runs in your browser · <a href="/press/">Press</a> · <a href="/">bindlore.app</a><br>Also from the maker: <a href="https://wordhaven.io">Wordhaven</a></footer>
+</div>
+</body>
+</html>
