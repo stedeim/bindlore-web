@@ -94,6 +94,7 @@
   }
 
   function onActivate(event) {
+    if (event.type === "auxclick" && event.button !== 1) return;
     if (isChromeWebStoreLink(event.target)) trackCwsClick();
   }
 

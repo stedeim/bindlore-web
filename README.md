@@ -1,6 +1,6 @@
 # Bindlore marketing site
 
-Static marketing site for **Bindlore** — a Chrome extension that turns books you own into AI skills, on your device.
+Static marketing site for **Bindlore**: a Chrome extension that turns books you have the right to use into AI skills. Core conversion runs in your browser.
 
 Repo target: `stedeim/bindlore-web`
 
@@ -11,7 +11,7 @@ Repo target: `stedeim/bindlore-web`
 3. Deploy. `vercel.json` enables clean URLs and trailing slashes.
 4. Attach the custom domain **bindlore.app** (and `www` if desired) under Project → Settings → Domains. Point DNS as Vercel instructs (usually A/CNAME records).
 
-No build step is required — serve `index.html` from the root.
+No build step is required. Serve `index.html` from the root.
 
 ## Analytics
 
@@ -21,7 +21,7 @@ Enable Web Analytics in the Vercel project dashboard after deploy. Do **not** ad
 
 ## Demo video
 
-Place the 16:9 MP4 at `public/demo/bindlore-demo-16x9.mp4` (or `demo/bindlore-demo-16x9.mp4` at the site root). The landing page references `/demo/bindlore-demo-16x9.mp4` with muted controls and `playsinline` — no autoplay with sound.
+Place the 16:9 MP4 at `public/demo/bindlore-demo-16x9.mp4` (or `demo/bindlore-demo-16x9.mp4` at the site root). The landing page references `/demo/bindlore-demo-16x9.mp4` with muted controls and `playsinline`. No autoplay with sound.
 
 ## Chrome Web Store CTA
 

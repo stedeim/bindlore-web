@@ -1,13 +1,13 @@
-# Meditations — Book V
+# Meditations: Book V
 
-**Cite as:** Meditations, Book V, §II or §III (`references/book-05.md`)
+**Cite as:** Meditations, Book V, §2 or §3 (`references/book-05.md`)
 
-Source: Marcus Aurelius, *Meditations*. Public-domain English translation by Meric Casaubon (1634). Sample chapter reference illustrating Bindlore's output format. Not OCR of a copyrighted edition.
+Source: Marcus Aurelius, *Meditations*. Public-domain English translation by George Long (1862). Sample chapter reference illustrating Bindlore's output format. Not OCR of a copyrighted edition.
 
-## §II
+## §2
 
-How easy a thing is it for a man to put off from him all turbulent adventitious imaginations, and presently to be in perfect rest and tranquillity!
+How easy it is to repel and to wipe away every impression which is troublesome or unsuitable, and immediately to be in all tranquility.
 
-## §III
+## §3
 
-Think thyself fit and worthy to speak, or to do anything that is according to nature, and let not the reproach, or report of some that may ensue upon it, ever deter thee. If it be right and honest to be spoken or done, undervalue not thyself so much, as to be discouraged from it. As for them, they have their own rational over-ruling part, and their own proper inclination: which thou must not stand and look about to take notice of, but go on straight, whither both thine own particular, and the common nature do lead thee; and the way of both these, is but one.
+Judge every word and deed which are according to nature to be fit for thee; and be not diverted by the blame which follows from any people nor by their words, but if a thing is good to be done or said, do not consider it unworthy of thee. For those persons have their peculiar leading principle and follow their peculiar movement; which things do not thou regard, but go straight on, following thy own nature and the common nature; and the way of both is one.
