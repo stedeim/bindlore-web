@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample skill — Bindlore</title>
+<meta name="description" content="A public-domain sample of the skill folder Bindlore emits: SKILL.md plus chapter references, illustrated with Meditations by Marcus Aurelius. Not OCR of a copyrighted edition.">
+<link rel="canonical" href="https://bindlore.app/sample/">
+<meta property="og:title" content="Sample skill — Bindlore">
+<meta property="og:description" content="Public-domain illustration of a Bindlore skill folder: SKILL.md plus chapter references from Meditations. Not OCR of a copyrighted edition.">
+<meta property="og:image" content="https://bindlore.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bindlore: Turn books you have the right to use into AI skills. Core conversion runs in your browser.">
+<meta property="og:url" content="https://bindlore.app/sample/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sample skill — Bindlore">
+<meta name="twitter:description" content="Public-domain illustration of a Bindlore skill folder: SKILL.md plus chapter references from Meditations. Not OCR of a copyrighted edition.">
+<meta name="twitter:image" content="https://bindlore.app/og.png">
+<meta name="twitter:image:alt" content="Bindlore: Turn books you have the right to use into AI skills. Core conversion runs in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:#f4f6fb;--panel:#fff;--ink:#101528;--soft:#4a5270;--hair:#dbe1f0;--gold:#e2951a;--gold-soft:#f2b445;--indigo:#2b52d6;--deep:#12205a}
+@media(prefers-color-scheme:dark){:root{--ground:#080c1c;--panel:#0f1730;--ink:#eaeefb;--soft:#9aa6cc;--hair:#26315a;--gold:#f2b445;--gold-soft:#ffd479;--indigo:#5b86ff;--deep:#0a1436}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.65}
+a{color:var(--indigo)}
+.wrap{max-width:840px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--ground) 78%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:"Fraunces",serif;font-weight:600;font-size:20px}
+.logo img{width:32px;height:32px;border-radius:9px}
+.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer;font-family:inherit}
+.btn-ghost{border:1px solid var(--hair);color:var(--ink);background:transparent}
+.btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#241500}
+@media(max-width:399px){header .btn{padding:8px 8px}}
+main{padding:38px 0 70px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+h1{font-size:clamp(32px,5vw,48px);margin:8px 0 12px;letter-spacing:-.01em}
+h2{font-size:28px;margin-top:36px;margin-bottom:10px}
+p{margin:0 0 16px}
+.kicker{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--gold);margin:0 0 10px}
+.lede{font-size:18px;color:var(--soft)}
+.banner{background:var(--panel);border:1px solid var(--hair);border-left:4px solid var(--gold);border-radius:14px;padding:16px 18px;margin:18px 0 26px}
+.banner p{margin:0;color:var(--ink)}
+.banner strong{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px}
+.files{font-family:"IBM Plex Mono",monospace;font-size:13.5px;background:var(--deep);color:#d5def8;border-radius:14px;padding:16px 18px;margin:0 0 22px;line-height:1.7}
+.skill{background:var(--panel);border:1px solid var(--hair);border-radius:16px;padding:8px 8px 4px;margin:0 0 18px}
+.skill pre{margin:0;padding:16px 14px 18px;overflow:auto;font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.55;color:var(--ink)}
+.dl{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 18px}
+.note{color:var(--soft);font-size:15px}
+.updates{margin-top:36px;background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:22px}
+.updates h2{margin-top:0}
+.updates p{color:var(--soft)}
+.updates-form{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.updates-form label{font-weight:600;font-size:14px}
+.updates-form input{font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--hair);background:var(--ground);color:var(--ink);min-width:min(100%,240px)}
+footer{border-top:1px solid var(--hair);padding:26px 0 42px;color:var(--soft);font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+code{font-family:"IBM Plex Mono",monospace;font-size:.92em}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+<!-- Vercel Web Analytics (official HTML snippet). Page views + utm_* stay on the URL. -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/js/analytics.js"></script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/"><img src="/icon.png" alt="Bindlore logo">Bindlore</a>
+    <div class="actions">
+      <a class="btn btn-ghost" href="/">Home</a>
+      <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Add to Chrome (free)</a>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <p class="kicker">Sample · public domain</p>
+    <h1>See what a skill looks like</h1>
+    <p class="lede">Bindlore turns a book you have the right to use into a folder an agent can cite: <code>SKILL.md</code> plus chapter references. Below is that shape, filled with a short public-domain text — not a dump of someone else’s copyrighted edition.</p>
+
+    <div class="banner">
+      <strong>Sample / public-domain illustration of the output format</strong>
+      <p>Marcus Aurelius, <em>Meditations</em>, in the public-domain English translation by Meric Casaubon (1634). These are short excerpts chosen to show citation style. Bindlore did not OCR a copyrighted edition to make this page, and this folder is not a scan of a modern book.</p>
+    </div>
+
+    <h2>The folder</h2>
+    <div class="files" aria-label="Sample skill folder">meditations/<br>├── SKILL.md<br>└── references/<br>&nbsp;&nbsp;&nbsp;&nbsp;├── book-02.md<br>&nbsp;&nbsp;&nbsp;&nbsp;├── book-04.md<br>&nbsp;&nbsp;&nbsp;&nbsp;└── book-05.md</div>
+    <div class="dl">
+      <a class="btn btn-gold" href="/sample/meditations-skill.zip" download>Download sample skill (.zip)</a>
+      <a class="btn btn-ghost" href="/sample/meditations/SKILL.md" download>Download SKILL.md</a>
+    </div>
+    <p class="note">Unzip the folder and point Claude, Codex, or another Markdown-reading agent at it. The real extension builds this on your device from a file you supply. DRM-locked files are refused.</p>
+
+    <h2><code>SKILL.md</code></h2>
+    <p class="note">Excerpt of the skill file. It tells the agent when to open the book, and how to cite a section instead of paraphrasing from memory.</p>
+    <div class="skill">
+      <pre><code>---
+name: meditations
+description: &gt;
+  Cite Marcus Aurelius, Meditations, when the user asks about Stoic
+  practice or this book. Quote only passages in the reference files.
+---
+
+# Meditations
+
+## Citation style
+
+Name the work, book, and section, and point at the reference file:
+
+&gt; Meditations, Book II, §I (`references/book-02.md`)
+
+Do not invent quotations. If a passage is not in `references/`,
+say it is not in this sample.
+
+## Reference files
+
+- references/book-02.md — Book II, §I
+- references/book-04.md — Book IV, §II, §III
+- references/book-05.md — Book V, §II, §III</code></pre>
+    </div>
+
+    <h2>Chapter reference</h2>
+    <p class="note">Excerpt of <code>references/book-02.md</code>. A full export keeps one file like this per chapter, with the section markers Bindlore found in the source.</p>
+    <div class="skill">
+      <pre><code># Meditations — Book II
+
+**Cite as:** Meditations, Book II, §I (`references/book-02.md`)
+
+## §I
+
+Remember how long thou hast already put off these things, and how
+often a certain day and hour as it were, having been set unto thee
+by the gods, thou hast neglected it. It is high time for thee to
+understand the true nature both of the world, whereof thou art a
+part; and of that Lord and Governor of the world, from whom, as a
+channel from the spring, thou thyself didst flow: and that there is
+but a certain limit of time appointed unto thee, which if thou shalt
+not make use of to calm and allay the many distempers of thy soul,
+it will pass away and thou with it, and never after return.</code></pre>
+    </div>
+    <p class="note">The other sample chapters are in the zip: Book IV on doing nothing at random, and on retiring into yourself; Book V on setting imaginations aside.</p>
+
+    <h2>Get the real thing</h2>
+    <p>The extension is free. Parsing and skill-building run in your browser. There is no Bindlore cloud for your library, and no account on the core path.</p>
+    <p><a class="btn btn-gold" href="https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgffh" target="_blank" rel="noopener">Add to Chrome (free)</a></p>
+
+    <div class="updates">
+      <p class="kicker">Get updates</p>
+      <h2>Hear when Bindlore ships something new.</h2>
+      <p>No account on this page. Submitting opens your email app with the subject “Bindlore updates.”</p>
+      <!-- TODO: replace with Kit form action -->
+      <form class="updates-form" action="mailto:stedeim@gmail.com?subject=Bindlore%20updates" method="post" enctype="text/plain">
+        <label for="sample-updates-email">Email</label>
+        <input id="sample-updates-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" inputmode="email">
+        <button class="btn btn-gold" type="submit">Get updates</button>
+      </form>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Bindlore · Sample skill is a public-domain illustration · <a href="/">Home</a> · <a href="/press/">Press</a> · <a href="/privacy/">Privacy</a></div>
+    <div>Also from the maker: <a href="https://wordhaven.io">Wordhaven</a></div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll("form.updates-form").forEach(function (form) {
+  form.addEventListener("submit", function (event) {
+    var input = form.querySelector('input[type="email"]');
+    var email = input && input.value ? input.value.trim() : "";
+    if (!email) return;
+    event.preventDefault();
+    var body = "Please send Bindlore updates to " + email + ".";
+    window.location.href = "mailto:stedeim@gmail.com?subject=" + encodeURIComponent("Bindlore updates") + "&body=" + encodeURIComponent(body);
+  });
+});
+</script>
+</body>
+</html>

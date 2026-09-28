@@ -34,6 +34,9 @@ https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgf
 | Path | Purpose |
 |------|---------|
 | `index.html` | Landing page |
+| `og.png` | Share card (1200×630) at `https://bindlore.app/og.png` |
+| `shots/` | Product UI screenshots (drop, preview, export) |
+| `sample/` | Public-domain sample skill page and downloadable folder |
 | `press/index.html` | Press kit hub |
 | `press/press.css` | Shared press-kit styles |
 | `press/launch/` | Launch / availability release |

@@ -52,6 +52,7 @@ code{font-family:"IBM Plex Mono",monospace;font-size:.92em}
 .contact-line{font-size:16.5px}
 .note{font-size:14px;color:var(--soft);margin-top:28px}
 footer{border-top:1px solid var(--hair);padding:26px 0 42px;color:var(--soft);font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
 @media(max-width:560px){
   .facts th,.facts td{display:block;width:auto;padding:6px 0}
   .facts th{border-bottom:none;padding-top:12px}
