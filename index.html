@@ -167,9 +167,6 @@ section{padding:74px 0;position:relative}
 .price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
 @media(max-width:820px){.price{grid-template-columns:1fr}}
 .tier{background:var(--panel);border:1px solid var(--hair);border-radius:20px;padding:30px;display:flex;flex-direction:column}
-.tier.best{border-color:var(--gold);box-shadow:var(--shadow);position:relative}
-.tier.best::before{content:"BEST VALUE";position:absolute;top:-11px;left:30px;background:var(--gold);
-  color:#241500;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.1em;padding:4px 11px;border-radius:20px}
 .tier .name{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 .tier .amt{font-family:"Fraunces",serif;font-size:46px;font-weight:600;margin:12px 0 2px;font-variant-numeric:tabular-nums}
 .tier .amt s{font-size:20px;color:var(--ink-soft);font-weight:400;margin-right:8px}
@@ -499,7 +496,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--hair);margin-top:60px;colo
       <p>Every format, OCR in your browser, batch conversion, all of it. Bindlore is free.</p>
     </div>
     <div class="price" style="grid-template-columns:1fr;max-width:440px">
-      <div class="tier best reveal">
+      <div class="tier reveal">
         <div class="name">Free</div>
         <div class="amt">$0</div>
         <ul><li>Unlimited book conversions</li><li>AI Skill, Markdown, Word, and Text exports</li><li>OCR in your browser for scans and photos</li><li>Batch a whole shelf at once</li><li>AI summaries and flashcards with your own key</li></ul>
