@@ -1,9 +1,9 @@
-# Meditations — Book II
+# Meditations: Book II
 
-**Cite as:** Meditations, Book II, §I (`references/book-02.md`)
+**Cite as:** Meditations, Book II, §1 (`references/book-02.md`)
 
-Source: Marcus Aurelius, *Meditations*. Public-domain English translation by Meric Casaubon (1634). Sample chapter reference illustrating Bindlore's output format. Not OCR of a copyrighted edition.
+Source: Marcus Aurelius, *Meditations*. Public-domain English translation by George Long (1862), Project Gutenberg #15877 (https://www.gutenberg.org/ebooks/15877). Sample chapter reference illustrating Bindlore's output format. Not OCR of a copyrighted edition. The footnote marker in the Gutenberg text is omitted.
 
-## §I
+## §1
 
-Remember how long thou hast already put off these things, and how often a certain day and hour as it were, having been set unto thee by the gods, thou hast neglected it. It is high time for thee to understand the true nature both of the world, whereof thou art a part; and of that Lord and Governor of the world, from whom, as a channel from the spring, thou thyself didst flow: and that there is but a certain limit of time appointed unto thee, which if thou shalt not make use of to calm and allay the many distempers of thy soul, it will pass away and thou with it, and never after return.
+Begin the morning by saying to thyself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial. All these things happen to them by reason of their ignorance of what is good and evil. But I who have seen the nature of the good that it is beautiful, and of the bad that it is ugly, and the nature of him who does wrong, that it is akin to me; not [only] of the same blood or seed, but that it participates in [the same] intelligence and [the same] portion of the divinity, I can neither be injured by any of them, for no one can fix on me what is ugly, nor can I be angry with my kinsman, nor hate him. For we are made for co-operation, like feet, like hands, like eyelids, like the rows of the upper and lower teeth. To act against one another, then, is contrary to nature; and it is acting against one another to be vexed and to turn away.

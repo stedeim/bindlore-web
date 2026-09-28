@@ -1,13 +1,13 @@
-# Meditations — Book IV
+# Meditations: Book IV
 
-**Cite as:** Meditations, Book IV, §II or §III (`references/book-04.md`)
+**Cite as:** Meditations, Book IV, §2 or §3 (`references/book-04.md`)
 
-Source: Marcus Aurelius, *Meditations*. Public-domain English translation by Meric Casaubon (1634). Sample chapter reference illustrating Bindlore's output format. Not OCR of a copyrighted edition.
+Source: Marcus Aurelius, *Meditations*. Public-domain English translation by George Long (1862), Project Gutenberg #15877 (https://www.gutenberg.org/ebooks/15877). Sample chapter reference illustrating Bindlore's output format. Not OCR of a copyrighted edition. Section 3 is an excerpt; the ellipsis marks the cut.
 
-## §II
+## §2
 
-Let nothing be done rashly, and at random, but all things according to the most exact and perfect rules of art.
+Let no act be done without a purpose, nor otherwise than according to the perfect principles of art.
 
-## §III
+## §3
 
-They seek for themselves private retiring places, as country villages, the sea-shore, mountains; yea thou thyself art wont to long much after such places. But all this thou must know proceeds from simplicity in the highest degree. At what time soever thou wilt, it is in thy power to retire into thyself, and to be at rest, and free from all businesses. A man cannot any whither retire better than to his own soul; he especially who is beforehand provided of such things within, which whensoever he doth withdraw himself to look in, may presently afford unto him perfect ease and tranquillity. By tranquillity I understand a decent orderly disposition and carriage, free from all confusion and tumultuousness. Afford then thyself this retiring continually, and thereby refresh and renew thyself.
+Men seek retreats for themselves, houses in the country, sea-shores, and mountains; and thou too art wont to desire such things very much. But this is altogether a mark of the most common sort of men, for it is in thy power whenever thou shalt choose to retire into thyself. For nowhere either with more quiet or more freedom from trouble does a man retire than into his own soul, particularly when he has within him such thoughts that by looking into them he is immediately in perfect tranquillity; and I affirm that tranquillity is nothing else than the good ordering of the mind. Constantly then give to thyself this retreat, and renew thyself; …
