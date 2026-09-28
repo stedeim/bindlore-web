@@ -40,12 +40,12 @@ https://chromewebstore.google.com/detail/bindlore/cfafldnpgdfankggihnejdfalifdgf
 | `press/index.html` | Press kit hub |
 | `press/press.css` | Shared press-kit styles |
 | `press/launch/` | Launch / availability release |
-| `press/privacy-on-device/` | Privacy / on-device release |
+| `press/privacy-in-your-browser/` | Privacy: core conversion in your browser |
 | `press/agent-skills/` | Agent skills / `SKILL.md` release |
 | `press/drm-refused/` | DRM refused release |
 | `press/founder-story/` | Founder story release |
 | `press/chrome-web-store-free/` | Chrome Web Store media brief |
-| `press/ocr-paper-books/` | On-device OCR media brief |
+| `press/ocr-paper-books/` | OCR in your browser media brief |
 | `press/local-first-pkm/` | Local-first PKM release |
 | `press/optional-ai-api-keys/` | Optional AI API keys media brief |
 | `press/quotable-facts/` | Quotable fact sheet |

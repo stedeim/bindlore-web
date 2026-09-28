@@ -28,7 +28,7 @@ Do not invent quotations. If a passage is not in `references/`, say it is not in
 
 - Work: Meditations
 - Author: Marcus Aurelius
-- Text: public-domain English translation by George Long (1862)
+- Text: public-domain English translation by George Long (1862), Project Gutenberg #15877 (https://www.gutenberg.org/ebooks/15877)
 - What this is: a short illustration of Bindlore's AI Skill folder. Not a full book, not a copyrighted edition, and not an OCR capture.
 
 ## Reference files
